@@ -179,10 +179,31 @@ def get_live_url(plugin, item_id, **kwargs):
         URL_LIVE_DATAS % today_value, headers={"User-Agent": web_utils.get_random_ua()}, max_age=-1)
     json_parser = json.loads(resp.text)
     url_stream_datas = ''
+    channel_id = item_id.split('_')[1]
+    url_stream_datas = None
     for stream_datas in json_parser:
-        if 'EQUIDIA' in stream_datas['title']:
+        if stream_datas['channel'] == channel_id:
             url_stream_datas = stream_datas["streamUrl"]
-    resp2 = urlquick.get(
-        url_stream_datas, headers={"User-Agent": web_utils.get_random_ua()}, max_age=-1)
+    if url_stream_datas:
+        resp2 = urlquick.get(
+            url_stream_datas, headers={"User-Agent": web_utils.get_random_ua()}, max_age=-1)
+    else:
+        xbmcgui.Dialog().ok(
+            'Info',
+            plugin.localize(30608))
+        return False
     json_parser2 = json.loads(resp2.text)
     return json_parser2["primary"]
+
+@Resolver.register
+def get_live2_url(plugin, item_id, **kwargs):
+	print('######################################')
+	print(URL_ROOT + '/%s' % item_id)
+	print('######################################')
+	resp = urlquick.get(
+		URL_ROOT + '/%s' % item_id, headers={"User-Agent": web_utils.get_random_ua()}, verify=False)
+	url_stream_datas = re.compile(
+			r'src\=&quot\;(http.*player\.php)').findall(resp.text)[0]
+	resp2 = urlquick.get(url_stream_datas, headers={"User-Agent": web_utils.get_random_ua()}, verify=False)
+	return re.compile(
+		r'player_hls\(\"(http.*)\"\)').findall(resp2.text)[0]
