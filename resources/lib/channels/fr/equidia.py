@@ -197,9 +197,6 @@ def get_live_url(plugin, item_id, **kwargs):
 
 @Resolver.register
 def get_live2_url(plugin, item_id, **kwargs):
-	print('######################################')
-	print(URL_ROOT + '/%s' % item_id)
-	print('######################################')
 	resp = urlquick.get(
 		URL_ROOT + '/%s' % item_id, headers={"User-Agent": web_utils.get_random_ua()}, verify=False)
 	url_stream_datas = re.compile(
