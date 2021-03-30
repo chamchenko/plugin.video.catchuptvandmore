@@ -79,7 +79,7 @@ menu = {
         'm3u_group': 'Maroc',
         'enabled': True,
         'order': 7,
-    }
+    },
     'Maghreb': {
         'resolver': '/resources/lib/channels/ma/medi1:get_live_url',
         'label': 'Medi1 Maghreb',
