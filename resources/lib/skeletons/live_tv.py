@@ -149,5 +149,12 @@ menu = {
         'thumb': 'channels/ma.png',
         'enabled': True,
         'order': 18
+    },
+    'paid': {
+        'route': '/resources/lib/main:generic_menu',
+        'label': 30079,
+        'thumb': 'channels/paid.png',
+        'enabled': True,
+        'order': 10
     }
 }
