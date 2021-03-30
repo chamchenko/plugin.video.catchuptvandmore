@@ -29,6 +29,7 @@ URL_IMAGE = URL_API_SEARCH + '/media/article_header/%s'
 
 URL_REPLAY_DATAS = 'https://api.equidia.fr/api/public/videos-store/player/%s'
 # VideoId
+URL_MOBILE_API = 'https://api.equidia.fr/api/public/racing/equidia-mobileapp-ios-1/%s'
 
 CATEGORIES_VIDEOS_EQUIDIA = {
     '/search/emissions': Script.localize(20343),  # TV shows
@@ -173,34 +174,12 @@ def get_video_course_url(plugin,
 def get_live_url(plugin, item_id, **kwargs):
 
     # Get date of Today
-    today = date.today()
-    today_value = today.strftime("%Y%m%d")
-    resp = urlquick.get(
-        URL_LIVE_DATAS % today_value, headers={"User-Agent": web_utils.get_random_ua()}, max_age=-1)
-    json_parser = json.loads(resp.text)
-    url_stream_datas = ''
-    channel_id = item_id.split('_')[1]
-    url_stream_datas = None
-    for stream_datas in json_parser:
-        if stream_datas['channel'] == channel_id:
-            url_stream_datas = stream_datas["streamUrl"]
-    if url_stream_datas:
-        resp2 = urlquick.get(
-            url_stream_datas, headers={"User-Agent": web_utils.get_random_ua()}, max_age=-1)
-    else:
-        xbmcgui.Dialog().ok(
-            'Info',
-            plugin.localize(30608))
-        return False
+    resp2 = urlquick.get(
+            URL_MOBILE_API % item_id,
+            headers={"User-Agent": "Equidia/6036 CFNetwork/1220.1 Darwin/20.3.0",
+            "Referer": "https://fr.equidia.app/"}, max_age=-1)
     json_parser2 = json.loads(resp2.text)
-    return json_parser2["primary"]
-
-@Resolver.register
-def get_live2_url(plugin, item_id, **kwargs):
-	resp = urlquick.get(
-		URL_ROOT + '/%s' % item_id, headers={"User-Agent": web_utils.get_random_ua()}, verify=False)
-	url_stream_datas = re.compile(
-			r'src\=&quot\;(http.*player\.php)').findall(resp.text)[0]
-	resp2 = urlquick.get(url_stream_datas, headers={"User-Agent": web_utils.get_random_ua()}, verify=False)
-	return re.compile(
-		r'player_hls\(\"(http.*)\"\)').findall(resp2.text)[0]
+    if "primary" in json_parser2:
+        return json_parser2["primary"]
+    else:
+        return json_parser2["stream_url_pri"]
