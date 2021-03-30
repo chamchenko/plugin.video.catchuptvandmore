@@ -787,7 +787,7 @@ menu = {
         'enabled': True,
         'order': 121
     },
-    'equidia_9': {
+    'equidia-live2': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
         'label': 'Equidia',
         'thumb': 'channels/fr/equidia.png',
@@ -813,8 +813,8 @@ menu = {
         'enabled': True,
         'order': 124
     },
-    'chaine-le-trot': {
-        'resolver': '/resources/lib/channels/fr/equidia:get_live2_url',
+    'equidia-racingtrot': {
+        'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
         'label': 'Equidia Racing Trot',
         'thumb': 'channels/fr/equidia.png',
         'fanart': 'channels/fr/equidia_fanart.jpg',
@@ -822,8 +822,8 @@ menu = {
         'enabled': True,
         'order': 125
     },
-    'chaine-racing-mag': {
-        'resolver': '/resources/lib/channels/fr/equidia:get_live2_url',
+    'equidia-racingmag': {
+        'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
         'label': 'Equidia Racing Mag',
         'thumb': 'channels/fr/equidiaracingmag.png',
         'fanart': 'channels/fr/equidiaracingmag_fanart.jpg',
@@ -831,8 +831,8 @@ menu = {
         'enabled': True,
         'order': 126
     },
-    'chaine-france-galop': {
-        'resolver': '/resources/lib/channels/fr/equidia:get_live2_url',
+    'equidia-racinggalop': {
+        'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
         'label': 'Equidia Racing Galop',
         'thumb': 'channels/fr/equidiaracinggalop.png',
         'fanart': 'channels/fr/equidiaracinggalop_fanart.jpg',
@@ -840,166 +840,76 @@ menu = {
         'enabled': True,
         'order': 127
     },
-    'equidia_1': {
+    'equidia-racing1': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R1',
+        'label': 'Equidia Racing 1',
         'thumb': 'channels/fr/equidiar1.png',
         'fanart': 'channels/fr/equidiar1_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 128
     },
-    'equidia_2': {
+    'equidia-racing2': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R2',
+        'label': 'Equidia Racing 2',
         'thumb': 'channels/fr/equidiar2.png',
         'fanart': 'channels/fr/equidiar2_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 129
     },
-    'equidia_3': {
+    'equidia-racing3': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R3',
+        'label': 'Equidia Racing 3',
         'thumb': 'channels/fr/equidiar3.png',
         'fanart': 'channels/fr/equidiar3_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 130
     },
-    'equidia_4': {
+    'equidia-racing4': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R4',
+        'label': 'Equidia Racing 4',
         'thumb': 'channels/fr/equidiar4.png',
         'fanart': 'channels/fr/eequidiar4_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 131
     },
-    'equidia_5': {
+    'equidia-racing5': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R5',
+        'label': 'Equidia Racing 5',
         'thumb': 'channels/fr/equidiar5.png',
         'fanart': 'channels/fr/equidiar5_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 132
     },
-    'equidia_6': {
+    'equidia-racing6': {
         'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
-        'label': 'Equidia R6',
+        'label': 'Equidia Racing 6',
         'thumb': 'channels/fr/equidiar6.png',
         'fanart': 'channels/fr/equidiar6_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
         'order': 133
     },
-    'rtl9': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'RTL9',
-        'thumb': 'channels/fr/rtl9.png',
-        'fanart': 'channels/fr/rtl9_fanart.jpg',
+    'equidia-racing7': {
+        'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
+        'label': 'Equidia Racing 7',
+        'thumb': 'channels/fr/equidiar7.png',
+        'fanart': 'channels/fr/equidiar7_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
-        'order': 1000
+        'order': 133
     },
-    'ab1': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'AB 1',
-        'thumb': 'channels/fr/ab1.png',
-        'fanart': 'channels/fr/ab1_fanart.jpg',
+    'equidia-racing8': {
+        'resolver': '/resources/lib/channels/fr/equidia:get_live_url',
+        'label': 'Equidia Racing 8',
+        'thumb': 'channels/fr/equidiar8.png',
+        'fanart': 'channels/fr/equidiar8_fanart.jpg',
         'm3u_group': 'Satellite/FAI',
         'enabled': True,
-        'order': 1001
-    },
-    'automoto-la-chaine': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'AutoMoto',
-        'thumb': 'channels/fr/automoto.png',
-        'fanart': 'channels/fr/automoto_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1002
-    },
-    'mangas': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Mangas',
-        'thumb': 'channels/fr/mangas.png',
-        'fanart': 'channels/fr/mangas_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1003
-    },
-    'toute-l-histoire': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': "Toute L'Histoire",
-        'thumb': 'channels/fr/toutelhistoire.png',
-        'fanart': 'channels/fr/toutelhistoire_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1004
-    },
-    'science-et-vie': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Science & Vie',
-        'thumb': 'channels/fr/scienceetvie.png',
-        'fanart': 'channels/fr/scienceetvie_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1005
-    },
-    'crime-district': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Crime District',
-        'thumb': 'channels/fr/crimedistrict.png',
-        'fanart': 'channels/fr/crimedistrict_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1006
-    },
-    'animaux-tv': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Animaux',
-        'thumb': 'channels/fr/animaux.png',
-        'fanart': 'channels/fr/animaux_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1007
-    },
-    'chasse-et-peche': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Chasse & Peche',
-        'thumb': 'channels/fr/chasseetpeche.png',
-        'fanart': 'channels/fr/chasseetpeche_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1008
-    },
-    'trek': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Trek',
-        'thumb': 'channels/fr/trek.png',
-        'fanart': 'channels/fr/trek_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1009
-    },
-    'action': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Action',
-        'thumb': 'channels/fr/action.png',
-        'fanart': 'channels/fr/action_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1010
-    },
-    'golf-channel': {
-        'resolver': '/resources/lib/channels/fr/abfr:get_live_url',
-        'label': 'Golf Channel',
-        'thumb': 'channels/fr/golfchannel.png',
-        'fanart': 'channels/fr/golfchannel_fanart.jpg',
-        'm3u_group': 'Satellite/FAI',
-        'enabled': True,
-        'order': 1011
+        'order': 133
     }
 }

@@ -181,10 +181,13 @@ msgctxt "#30066"
 msgid "Ethiopia"
 msgstr "Ethiopië"
 
-msgctxt "#30066"
+msgctxt "#30067"
 msgid "Morocco"
 msgstr "Marokko"
 
+msgctxt "#30079"
+msgid "Paid"
+msgstr ""
 # Channels (from 30080 to 30129)
 msgctxt "#30080"
 msgid "French channels"

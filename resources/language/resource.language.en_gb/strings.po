@@ -193,7 +193,9 @@ msgctxt "#30067"
 msgid "Morocco"
 msgstr ""
 
-
+msgctxt "#30079"
+msgid "Paid"
+msgstr ""
 # Channels (from 30080 to 30129)
 
 msgctxt "#30080"
