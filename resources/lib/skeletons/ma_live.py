@@ -80,4 +80,28 @@ menu = {
         'enabled': True,
         'order': 7,
     }
+    'Maghreb': {
+        'resolver': '/resources/lib/channels/ma/medi1:get_live_url',
+        'label': 'Medi1 Maghreb',
+        'thumb': 'channels/ma/medi1.png',
+        'fanart': 'channels/ma/medi1maghreb_fanart.jpg',
+        'enabled': True,
+        'order': 8
+    },
+    'Arabic': {
+        'resolver': '/resources/lib/channels/ma/medi1:get_live_url',
+        'label': 'Medi1 Arabic',
+        'thumb': 'channels/ma/medi1arabic.png',
+        'fanart': 'channels/ma/medi1arabic_fanart.jpg',
+        'enabled': True,
+        'order': 9
+    },
+    'Afrique': {
+        'resolver': '/resources/lib/channels/ma/medi1:get_live_url',
+        'label': 'Medi1 Afrique',
+        'thumb': 'channels/ma/medi1afrique.png',
+        'fanart': 'channels/ma/medi1afrique_fanart.jpg',
+        'enabled': True,
+        'order': 10
+    }
 }
