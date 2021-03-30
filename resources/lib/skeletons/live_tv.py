@@ -150,11 +150,11 @@ menu = {
         'enabled': True,
         'order': 18
     },
-    'paid': {
+    'paid_live': {
         'route': '/resources/lib/main:generic_menu',
         'label': 30079,
         'thumb': 'channels/paid.png',
         'enabled': True,
-        'order': 10
+        'order': 100
     }
 }
